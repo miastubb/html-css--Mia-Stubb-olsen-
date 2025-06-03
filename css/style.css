@@ -183,7 +183,7 @@ body {
 
 /*backgrounds*/
 .home-page {
-  background-image: url("images/Foss.jpg");
+  background-image: url("/images/Foss.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
