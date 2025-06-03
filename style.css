@@ -413,6 +413,37 @@ body.shop-page {
   overflow: hidden;
 }
 
+.product-description .text-content p,
+.product-description .text-content h2 {
+  color: #2F5327;
+  background: rgba(248,230,191,0.95);
+  padding: 8px 12px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  font-size: 1.18rem;
+}
+
+.jacket-image {
+  max-width: 260px;
+  width: auto;
+  height: auto;
+  display: block;
+  margin: 0 auto 16px auto;
+}
+
+@media (max-width: 600px) {
+  .product-description .text-content p,
+  .product-description .text-content h2 {
+    font-size: 1.08rem;
+    padding: 10px 8px;
+  }
+  .jacket-image {
+    max-width: 160px;
+    width: auto;
+    margin-bottom: 14px;
+  }
+}
+
 body.product-description {
   overflow: hidden;
   height: 100vh;
@@ -1168,6 +1199,11 @@ body.construction-page h1 {
 
   .item img {
     max-height: 120px;
+  }
+
+  .item p {
+    color: #2F5327;
+    font-size: 1rem;
   }
 
   .price-button {
