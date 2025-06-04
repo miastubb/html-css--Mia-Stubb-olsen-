@@ -1223,6 +1223,22 @@ body.construction-page h1 {
   }
 }
 
+/* --- Jacket Page Description Styling --- */
+.item-description {
+  font-size: 1rem;
+  color: #1F5327;
+  background: #F8E6BF;
+  padding: 14px 18px;
+  border-radius: 10px;
+  margin: 24px auto 0 auto;
+  max-width: 700px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  letter-spacing: 0.5px;
+}
+.item-description .signature {
+  display: none;
+}
 /* SALE BUTTON COLOR FLIP */
 .price-button.sale {
   background-color: #F8C659;
