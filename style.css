@@ -38,16 +38,6 @@ body {
   display: none;
 }
 
-@media (max-width: 768px) {
-  .desktop {
-    display: none !important;
-  }
-
-  .mobile-only {
-    display: block !important;
-  }
-}
-
 .nav-left {
   display: flex;
   gap: 10px;
@@ -429,21 +419,6 @@ body.shop-page {
   height: auto;
   display: block;
   margin: 0 auto 16px auto;
-}
-
-@media (max-width: 600px) {
-
-  .product-description .text-content p,
-  .product-description .text-content h2 {
-    font-size: 1.08rem;
-    padding: 10px 8px;
-  }
-
-  .jacket-image {
-    max-width: 160px;
-    width: auto;
-    margin-bottom: 14px;
-  }
 }
 
 body.product-description {
@@ -865,6 +840,136 @@ body.construction-page h1 {
   background-color: #25441e;
 }
 
+.shop-page::after {
+  background-size: cover;
+  height: 40vh;
+  top: 60px;
+}
+
+.nav-right a {
+  display: none;
+}
+
+.icon-wrapper {
+  display: flex;
+}
+
+.site-header {
+  padding: 1rem 0.5rem;
+}
+
+.logo-container {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+}
+
+.nav-left {
+  gap: 5px;
+  margin-right: 0;
+}
+
+/* Jacket Page Description Styling */
+.item-description {
+  font-size: 1rem;
+  color: #1F5327;
+  background: #F8E6BF;
+  padding: 14px 18px;
+  border-radius: 10px;
+  margin: 24px auto 0 auto;
+  max-width: 700px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  letter-spacing: 0.5px;
+}
+
+.item-description .signature {
+  display: none;
+}
+
+/*  Cart Badge Styling-added to cart icon */
+.cart-container {
+  position: relative;
+  display: inline-block;
+}
+
+.cart-badge {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  background: #2F5327;
+  color: #F8E6BF;
+  border-radius: 50%;
+  padding: 2px 7px;
+  font-size: 0.8em;
+  min-width: 18px;
+  text-align: center;
+  font-family: 'Bebas Neue', sans-serif;
+  font-weight: bold;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+  z-index: 2;
+}
+
+/* SALE BUTTON COLOR FLIP */
+.price-button.sale {
+  background-color: #F8C659;
+  color: #2F5327;
+  border: 2px solid #2F5327;
+  transition: all 0.3s ease;
+}
+
+.price-button.sale:hover,
+.price-button.sale:active {
+  background-color: #2F5327;
+  color: #F8E6BF;
+}
+
+/* Only icon links in icon-wrapper are cream */
+.icon-wrapper a,
+.icon-wrapper a:visited {
+  color: #F8E6BF;
+  text-decoration: none;
+}
+
+/* Purchase button color flip */
+a.purchase-btn {
+  color: #2F5327;
+}
+
+a.purchase-btn:hover,
+a.purchase-btn:active {
+  color: #F8C659;
+}
+
+
+/* --- MEDIA QUERIES MOVED TO BOTTOM --- */
+
+@media (max-width: 768px) {
+  .desktop {
+    display: none !important;
+  }
+
+  .mobile-only {
+    display: block !important;
+  }
+}
+
+@media (max-width: 600px) {
+
+  .product-description .text-content p,
+  .product-description .text-content h2 {
+    font-size: 1.08rem;
+    padding: 10px 8px;
+  }
+
+  .jacket-image {
+    max-width: 160px;
+    width: auto;
+    margin-bottom: 14px;
+  }
+}
+
 @media (max-width:1024px) {
   .home-page {
     background-image: url("images/gvepseborg.jpg");
@@ -1053,38 +1158,6 @@ body.construction-page h1 {
   }
 }
 
-
-.shop-page::after {
-  background-size: cover;
-  height: 40vh;
-  top: 60px;
-}
-
-.nav-right a {
-  display: none;
-}
-
-.icon-wrapper {
-  display: flex;
-}
-
-.site-header {
-  padding: 1rem 0.5rem;
-}
-
-.logo-container {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 120px;
-}
-
-.nav-left {
-  gap: 5px;
-  margin-right: 0;
-}
-
-
 @media (max-width: 768px) {
   .checkout-container {
     flex-direction: column;
@@ -1204,76 +1277,4 @@ body.construction-page h1 {
     flex: 1 1 50%;
     margin-bottom: 10px;
   }
-}
-
-/* Jacket Page Description Styling */
-.item-description {
-  font-size: 1rem;
-  color: #1F5327;
-  background: #F8E6BF;
-  padding: 14px 18px;
-  border-radius: 10px;
-  margin: 24px auto 0 auto;
-  max-width: 700px;
-  text-align: center;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  letter-spacing: 0.5px;
-}
-
-.item-description .signature {
-  display: none;
-}
-
-/*  Cart Badge Styling-added to cart icon */
-.cart-container {
-  position: relative;
-  display: inline-block;
-}
-
-.cart-badge {
-  position: absolute;
-  top: -8px;
-  right: -10px;
-  background: #2F5327;
-  color: #F8E6BF;
-  border-radius: 50%;
-  padding: 2px 7px;
-  font-size: 0.8em;
-  min-width: 18px;
-  text-align: center;
-  font-family: 'Bebas Neue', sans-serif;
-  font-weight: bold;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
-  z-index: 2;
-}
-
-/* SALE BUTTON COLOR FLIP */
-.price-button.sale {
-  background-color: #F8C659;
-  color: #2F5327;
-  border: 2px solid #2F5327;
-  transition: all 0.3s ease;
-}
-
-.price-button.sale:hover,
-.price-button.sale:active {
-  background-color: #2F5327;
-  color: #F8E6BF;
-}
-
-/* Only icon links in icon-wrapper are cream */
-.icon-wrapper a,
-.icon-wrapper a:visited {
-  color: #F8E6BF;
-  text-decoration: none;
-}
-
-/* Purchase button color flip */
-a.purchase-btn {
-  color: #2F5327;
-}
-
-a.purchase-btn:hover,
-a.purchase-btn:active {
-  color: #F8C659;
 }
